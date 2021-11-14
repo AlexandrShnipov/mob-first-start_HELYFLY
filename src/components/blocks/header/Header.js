@@ -11,7 +11,7 @@ function Header() {
                 <div className={s.inner}>
                     <div className={s.wrapper}>
                         <a href="/">
-                            <img src={logo} alt="" className={s.logo} />
+                            <img src={logo} alt="HELYFLY" className={s.logo} />
                         </a>
                         <a href="tel:+78001231212" className={s.phoneMoscow}>Москва</a>
                         <div className={s.phone}>
