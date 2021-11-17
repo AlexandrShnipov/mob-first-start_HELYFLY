@@ -10,7 +10,7 @@ function Main() {
                 <div className={s.inner}>
                     <h1 className={s.title}>Эксклюзивная <span>фотосессия</span> при полете на вертолете</h1>
                     <div className={s.priceBox}>
-                        <div className={s.wrapper}>
+                        <div className={s.priceBoxWrap}>
                             <span className={s.priceLabel}>Стоимость:</span>
                             <span className={s.price}>1500₽</span>
                         </div>
