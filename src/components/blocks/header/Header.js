@@ -11,20 +11,20 @@ function Header() {
                 <div className={s.inner}>
                     <div className={s.wrapper}>
                         <a href="/">
-                            <img src={logo} alt="HELYFLY" className={s.logo} />
+                            <img className={s.logo} src={logo} alt="HELYFLY" />
                         </a>
-                        <a href="tel:+78001231212" className={s.phoneMoscow}>Москва</a>
+                        <a className={s.phoneCity} href="tel:+78001231212" >Москва</a>
                         <div className={s.phone}>
                             <span>Телефон:</span>
-                            <a href="tel:+78001231212" className={s.phoneLink}>8(800)-123-12-12</a>
+                            <a className={s.phoneLink} href="tel:+78001231212" >8(800)-123-12-12</a>
                         </div>
                     </div>
-                    <a href="#" className={s.user}>
-                        <img src={userIcon} alt="" className={s.userImg}/>
+                    <a className={s.user} href="#">
+                        <img className={s.userImg} src={userIcon} alt="" />
                     </a>
                 </div>
             </div>
-            
+
         </div>
     );
 }

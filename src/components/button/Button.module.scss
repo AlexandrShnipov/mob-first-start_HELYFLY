@@ -8,13 +8,17 @@
     border-radius: 7px;
     background-color: transparent;
     color: $primaryColor;
-    @include text(16px, 900, 20px); 
-    filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)) 
-            drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
+    @include text(16px, 900, 1.25);
+    filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
     transform: translateY(-7px);
     cursor: pointer;
+
+    @include media(sm) {
+        width: 304px;
+        @include text(18px, 900, 1.25);
+    }
 }
 
-a{
+a {
     cursor: pointer;
 }

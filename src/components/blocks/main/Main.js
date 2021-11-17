@@ -14,9 +14,12 @@ function Main() {
                             <span className={s.priceLabel}>Стоимость:</span>
                             <span className={s.price}>1500₽</span>
                         </div>
-                        <img className={s.percent} src={percent} alt="percent"/>
+                        <div className={s.percentWrap}>
+                            <img className={s.percent} src={percent} alt="percent" />
+                        </div>
+
                     </div>
-                    <Button title="Забронировать место"/>
+                    <Button title="Забронировать место" />
                 </div>
             </div>
         </div>
