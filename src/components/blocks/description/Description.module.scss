@@ -1,0 +1,34 @@
+@import '../../../styles/sass/vars.scss';
+@import '../../../styles//sass/mixins.scss';
+
+.container {
+  @extend %container;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+
+  &Title {
+    color: $textColor;
+    @include text(28px, 400, 1.21);
+    text-align: center;
+    margin-bottom: 13px;
+    padding-top: 39px;
+  }
+
+  &Content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &Text {
+    color: $textColor;
+    @include text(14px, 400, 1.43);
+    margin-bottom: 31px;
+  }
+}
+

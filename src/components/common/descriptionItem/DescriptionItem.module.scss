@@ -1,0 +1,30 @@
+@import '../../../styles/sass/mixins.scss';
+@import '../../../styles/sass/vars.scss';
+
+.descriptionItem {
+  display: flex;
+  align-items: center;
+  color: $textColor;
+  @include text(14px, 500, 1.43)
+}
+
+.descriptionItem:nth-child(1){
+  margin-bottom: 20px;
+}
+
+.descriptionItem:nth-child(2){
+  margin-bottom: 16px;
+}
+
+
+.descriptionItem:nth-child(3){
+  margin-bottom: 16px;
+}
+
+.descriptionItem:nth-child(4){
+  margin-bottom: 38px;
+}
+
+.img{
+  margin-right: 10px;
+}

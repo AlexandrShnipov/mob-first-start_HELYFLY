@@ -1,6 +1,6 @@
 import s from './Main.module.scss';
 import percent from './../../../assets/img/percent.svg'
-import Button from '../../button/Button';
+import Button from '../../common/button/Button';
 
 
 function Main() {
