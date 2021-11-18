@@ -3,6 +3,7 @@
 
 .container {
   @extend %container;
+  margin-bottom: 60px;
 }
 
 .inner {
@@ -30,5 +31,22 @@
     @include text(14px, 400, 1.43);
     margin-bottom: 31px;
   }
+}
+
+.testimonialsBlock{
+  display: flex;
+   padding-top: 14px;
+    padding-bottom: 14px;
+    border-top:  0.5px solid $secondaryColor;
+    border-bottom:  0.5px solid $secondaryColor;
+
+  &Img{
+    margin-right: 11px;
+     }
+
+     &Content{
+      color: $textColor;
+      @include text(14px, 400, 1.43);
+     }
 }
 

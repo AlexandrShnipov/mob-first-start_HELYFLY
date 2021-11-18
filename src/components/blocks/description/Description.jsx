@@ -46,7 +46,7 @@ const Description = () => {
           </ul>
 
           <div className={s.testimonialsBlock}>
-            <img src={cup} alt="" />
+            <img className={s.testimonialsBlockImg} src={cup} alt="" />
             <div className={s.testimonialsBlockContent}>
               <p className={s.testimonialsBlockContentText}>Более 50 отзывов с оценкой </p>
               <div className={s.testimonialsBlockContentRating}>
