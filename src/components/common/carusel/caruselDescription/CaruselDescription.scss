@@ -1,0 +1,30 @@
+@import '../../../../styles/sass/vars.scss';
+@import '../../../../styles/sass/mixins.scss';
+
+.caruselDescription>.slick-prev {
+  display: none !important;
+}
+
+.caruselDescription>.slick-next {
+  width: 12px;
+  height: 17px;
+  background-image: url(../../../../assets/img/description/arrow.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 20px;
+  bottom: 20px !important;
+  top: initial !important;
+ 
+  &:hover {
+    opacity: .5;
+  }
+
+  &::before {
+ display: none;
+  }
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+}

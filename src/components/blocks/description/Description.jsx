@@ -6,6 +6,7 @@ import item_3 from '../../../assets/img/description/item_3.svg';
 import item_4 from '../../../assets/img/description/item_4.svg';
 import cup from '../../../assets/img/description/cup.png';
 import DescriptionItem from '../../common/descriptionItem/DescriptionItem';
+import CaruselDescription from '../../common/carusel/caruselDescription/CaruselDescription';
 
 const Description = () => {
 
@@ -16,11 +17,10 @@ const Description = () => {
           <h2 className={s.descriptionTitle}>Фотосессия <br/>
             в вертолете</h2>
 
-          <div className={s.descriptionSlider}>
-
-          </div>
+          
 
           <div className={s.descriptionContent}>
+          <CaruselDescription/>
      <p className={s.descriptionText}>Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф запечатлит лучшие моменты!</p>
 
           <ul className={s.descriptionItems}>
