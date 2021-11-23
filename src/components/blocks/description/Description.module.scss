@@ -19,34 +19,78 @@
     text-align: center;
     margin-bottom: 13px;
     padding-top: 39px;
+
+    @include media(sm) {
+      @include text(40px, 500, 1.23);
+      margin-top: 50px;
+      margin-bottom: 40px;
+    }
   }
 
-  &Content {
+  &ContentWrap {
     display: flex;
     flex-direction: column;
   }
+}
+
+.descriptionContent {
 
   &Text {
     color: $textColor;
     @include text(14px, 400, 1.43);
-    margin-bottom: 31px;
+    margin-bottom: 24px;
+    padding-top: 30px;
+
+
+    @include media(xs) {
+      @include text(18px, 400, 1.44);
+      margin-bottom: 22px;
+      margin-right: 14px;
+    }
+
+    @include media(sm) {
+      padding-top: 46px;
+      width: 549px;
+    }
   }
 }
 
-.testimonialsBlock{
+.testimonialsBlock {
   display: flex;
-   padding-top: 14px;
-    padding-bottom: 14px;
-    border-top:  0.5px solid $secondaryColor;
-    border-bottom:  0.5px solid $secondaryColor;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-top: 0.5px solid $secondaryColor;
+  border-bottom: 0.5px solid $secondaryColor;
 
-  &Img{
+  @include media(xs) {
+    padding-top: 20px;
+    padding-bottom: 29.2px;
+    align-items: flex-end;
+  }
+
+  &Img {
     margin-right: 11px;
-     }
+    width: 32px;
+    height: 35.8px;
 
-     &Content{
-      color: $textColor;
-      @include text(14px, 400, 1.43);
-     }
+    @include media(xs) {
+      margin-right: 10px;
+    }
+  }
+
+  &Content {
+    color: $textColor;
+    @include text(14px, 400, 1.43);
+
+    & span {
+      font-weight: 600;
+    }
+
+    @include media(xs) {
+      display: flex;
+      align-items: center;
+
+      @include text(18px, 400, 1.43);
+    }
+  }
 }
-

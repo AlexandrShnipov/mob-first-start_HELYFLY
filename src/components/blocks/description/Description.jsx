@@ -14,48 +14,51 @@ const Description = () => {
     <div className={s.description}>
       <div className={s.container}>
         <div className={s.inner}>
-          <h2 className={s.descriptionTitle}>Фотосессия <br/>
+          <h2 className={s.descriptionTitle}>Фотосессия <br />
             в вертолете</h2>
 
-          
 
-          <div className={s.descriptionContent}>
-          <CaruselDescription/>
-     <p className={s.descriptionText}>Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф запечатлит лучшие моменты!</p>
 
-          <ul className={s.descriptionItems}>
-            <DescriptionItem className={s.descriptionItem}
-              img={item_1}
-              alt="clock"
-              text="3 часа съемки" />
+          <div className={s.descriptionContentWrap}>
+            <CaruselDescription />
 
-            <DescriptionItem  className={s.descriptionItem}
-              img={item_2}
-              alt="camera"
-              text="Более 50 фотографий" />
+            <div className={s.descriptionContent}>
+              <p className={s.descriptionContentText}>Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф запечатлит лучшие моменты!</p>
 
-            <DescriptionItem  className={s.descriptionItem}
-              img={item_3}
-              alt="place"
-              text="Москва" />
+              <ul className={s.descriptionItems}>
+                <DescriptionItem className={s.descriptionItem}
+                  img={item_1}
+                  alt="clock"
+                  text="3 часа съемки" />
 
-            <DescriptionItem  className={s.descriptionItem}
-              img={item_4}
-              alt="img dialog"
-              text="Готовы ответить на любые вопросы" />
-          </ul>
+                <DescriptionItem className={s.descriptionItem}
+                  img={item_2}
+                  alt="camera"
+                  text="Более 50 фотографий" />
 
-          <div className={s.testimonialsBlock}>
-            <img className={s.testimonialsBlockImg} src={cup} alt="" />
-            <div className={s.testimonialsBlockContent}>
-              <p className={s.testimonialsBlockContentText}>Более 50 отзывов с оценкой </p>
-              <div className={s.testimonialsBlockContentRating}>
+                <DescriptionItem className={s.descriptionItem}
+                  img={item_3}
+                  alt="place"
+                  text="Москва" />
 
+                <DescriptionItem className={s.descriptionItem}
+                  img={item_4}
+                  alt="img dialog"
+                  text="Готовы ответить на любые вопросы" />
+              </ul>
+
+              <div className={s.testimonialsBlock}>
+                <img className={s.testimonialsBlockImg} src={cup} alt="cup" />
+                <div className={s.testimonialsBlockContent}>
+                  <p className={s.testimonialsBlockContentText}>Более <span>50</span> отзывов с оценкой </p>
+                  <div className={s.testimonialsBlockContentRating}>
+
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-</div>
-       
+
         </div>
       </div>
 
