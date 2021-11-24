@@ -7,6 +7,7 @@ import item_4 from '../../../assets/img/description/item_4.svg';
 import cup from '../../../assets/img/description/cup.png';
 import DescriptionItem from '../../common/descriptionItem/DescriptionItem';
 import CaruselDescription from '../../common/carusel/caruselDescription/CaruselDescription';
+import RatingDescription from '../../common/ratingDescription/RatingDescription';
 
 const Description = () => {
 
@@ -14,14 +15,14 @@ const Description = () => {
     <div className={s.description}>
       <div className={s.container}>
         <div className={s.inner}>
-        <div className={s.descriptionTitleCaruselBlock}>
+          <div className={s.descriptionTitleCaruselBlock}>
             <h2 className={s.descriptionTitle}>Фотосессия <br />
               в вертолете</h2>
-          
+
             <div className={s.descriptionCarusel}>
               <CaruselDescription />
             </div>
-        </div>
+          </div>
 
           <div className={s.descriptionContent}>
             <p className={s.descriptionContentText}>Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф запечатлит лучшие моменты!</p>
@@ -52,9 +53,9 @@ const Description = () => {
               <img className={s.testimonialsBlockImg} src={cup} alt="cup" />
               <div className={s.testimonialsBlockContent}>
                 <p className={s.testimonialsBlockContentText}>Более <span>50</span> отзывов с оценкой </p>
-                <div className={s.testimonialsBlockContentRating}>
-
-                </div>
+              
+                  <RatingDescription />
+                
               </div>
             </div>
           </div>

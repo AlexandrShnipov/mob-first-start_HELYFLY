@@ -1,0 +1,11 @@
+@import '../../../styles/sass/mixins.scss';
+@import '../../../styles/sass/vars.scss';
+
+.starRating {
+  margin-right: 7px;
+
+  @include media(xs) {
+    position: relative;
+    top: 3px;
+  }
+}
