@@ -13,6 +13,20 @@
 
 .description {
 
+  &TitleCaruselBlock {
+    @include media (md) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &Carusel {
+    @include media (md) {
+      width: 48.6%;
+      padding-top: 71px;
+    }
+  }
+
   &Title {
     color: $textColor;
     @include text(28px, 400, 1.21);
@@ -22,8 +36,13 @@
 
     @include media(sm) {
       @include text(40px, 500, 1.23);
-      margin-top: 50px;
+      padding-top: 50px;
       margin-bottom: 40px;
+    }
+
+    @include media (md){
+      padding-top: 71px;
+      margin-bottom: 0;
     }
   }
 
@@ -34,6 +53,10 @@
 }
 
 .descriptionContent {
+
+  @include media (md){
+    margin-top: -260px;
+  }
 
   &Text {
     color: $textColor;
@@ -52,6 +75,10 @@
       padding-top: 46px;
       width: 549px;
     }
+
+    @include media (md){
+     padding-top: 0;
+    }
   }
 }
 
@@ -67,6 +94,11 @@
     padding-bottom: 29.2px;
     align-items: flex-end;
   }
+
+  @include media (md){
+   width: 50%;
+   padding-bottom: 31px;
+    }
 
   &Img {
     margin-right: 11px;

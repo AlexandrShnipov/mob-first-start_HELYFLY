@@ -2,10 +2,9 @@
 @import '../../../../styles/sass/mixins.scss';
 
 .caruselDescription {
-  flex-basis: 100%;
   border-radius: 4px;
-
-  &>.slick-list{
+ 
+  &>.slick-list {
     border-radius: 4px;
   }
 
@@ -22,19 +21,19 @@
     background-size: cover;
     background-position: center center;
     right: 20px;
-    bottom:20px !important;
+    bottom: 20px !important;
     top: initial !important;
 
     @include media (xs) {
       width: 16px;
       height: 23px;
       right: 30px;
-      bottom:3 0px !important;
-    } 
+      bottom: 3 0px !important;
+    }
 
     @include media (sm) {
       right: 40px;
-    } 
+    }
 
     &:hover {
       opacity: .5;
