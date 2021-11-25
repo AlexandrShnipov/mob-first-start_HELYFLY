@@ -1,10 +1,10 @@
 import React from "react";
 import Rating from "react-rating"
-import s from './RatingDescription.module.scss';
-import styles from './RatingDescription.scss';
+import s from './Rating.module.scss';
+import styles from './Rating.scss';
 import star from '../../../assets/img/star.png';
 
-const RatingDescription = () => {
+const RatingStar = () => {
   return (
       <Rating
     emptySymbol={<img className='starRating' src={star}  alt="star"/>}
@@ -14,6 +14,6 @@ const RatingDescription = () => {
   )
 }
 
-export default RatingDescription;
+export default RatingStar;
 
 

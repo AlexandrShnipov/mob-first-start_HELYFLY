@@ -5,7 +5,7 @@ import Button from '../../common/button/Button';
 
 function Main() {
     return (
-        <div className={s.main}>
+        <section className={s.main}>
             <div className={s.container}>
                 <div className={s.inner}>
                     <h1 className={s.title}>Эксклюзивная <span>фотосессия</span> при полете на вертолете</h1>
@@ -22,7 +22,7 @@ function Main() {
                     <Button title="Забронировать место" />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

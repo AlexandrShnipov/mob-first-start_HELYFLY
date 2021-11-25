@@ -1,0 +1,14 @@
+.caruselGallery{
+
+&>.slick-list{
+    max-height: 185px;
+}
+
+&>.slick-arrow{
+  display: none !important;
+}
+
+  &Item{
+    margin-right: 15px;
+  }
+}

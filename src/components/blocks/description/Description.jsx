@@ -7,12 +7,12 @@ import item_4 from '../../../assets/img/description/item_4.svg';
 import cup from '../../../assets/img/description/cup.png';
 import DescriptionItem from '../../common/descriptionItem/DescriptionItem';
 import CaruselDescription from '../../common/carusel/caruselDescription/CaruselDescription';
-import RatingDescription from '../../common/ratingDescription/RatingDescription';
+import RatingStar from '../../common/rating/Rating';
 
 const Description = () => {
 
   return (
-    <div className={s.description}>
+    <section className={s.description}>
       <div className={s.container}>
         <div className={s.inner}>
           <div className={s.descriptionTitleCaruselBlock}>
@@ -54,14 +54,14 @@ const Description = () => {
               <div className={s.testimonialsBlockContent}>
                 <p className={s.testimonialsBlockContentText}>Более <span>50</span> отзывов с оценкой </p>
 
-                <RatingDescription />
+                <RatingStar />
 
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
   )
 }
