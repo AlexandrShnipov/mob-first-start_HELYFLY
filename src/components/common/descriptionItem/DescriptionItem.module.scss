@@ -5,30 +5,55 @@
   display: flex;
   align-items: center;
   color: $textColor;
-  @include text(14px, 500, 1.43)
-}
-
-.descriptionItem:nth-child(1) {
-  margin-bottom: 20px;
-}
-
-.descriptionItem:nth-child(2) {
-  margin-bottom: 16px;
-}
+  @include text(14px, 500, 1.43);
 
 
-.descriptionItem:nth-child(3) {
-  margin-bottom: 16px;
-}
-
-.descriptionItem:nth-child(4) {
-  margin-bottom: 38px;
-
-  @include media (xs) {
-    margin-bottom: 34px;
+  &:nth-child(1) {
+    margin-bottom: 22px;
   }
-}
 
-.img {
-  margin-right: 10px;
+  &:nth-child(2) {
+    margin-bottom: 16px;
+  }
+
+
+  &:nth-child(3) {
+    margin-bottom: 19px;
+
+    @include media (xs) {
+      margin-bottom: 13px;
+    }
+
+  }
+
+  &:nth-child(4) {
+    margin-bottom: 38px;
+
+    @include media (xs) {
+      margin-bottom: 34px;
+    }
+  }
+
+  &:nth-child(1) .img {
+    margin-right: 11px;
+  }
+
+  &:nth-child(2) .img {
+    margin-right: 8px;
+  }
+
+  &:nth-child(3) .img {
+    margin-right: 9px;
+  }
+
+  &:nth-child(4) .img {
+    margin-right: 12px;
+    position: relative;
+    top: -9px;
+
+
+    @include media (xs) {
+      top: 0;
+    }
+  }
 }

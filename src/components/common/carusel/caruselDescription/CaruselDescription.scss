@@ -21,18 +21,22 @@
     background-size: cover;
     background-position: center center;
     right: 20px;
-    bottom: 20px !important;
+    bottom: 13px !important;
     top: initial !important;
 
     @include media (xs) {
       width: 16px;
       height: 23px;
       right: 30px;
-      bottom: 3 0px !important;
+      bottom: 30px !important;
     }
 
     @include media (sm) {
       right: 40px;
+    }
+
+    @include media (xxl) {
+      bottom: 20px !important;
     }
 
     &:hover {

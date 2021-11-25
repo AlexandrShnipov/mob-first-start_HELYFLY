@@ -13,7 +13,31 @@
 
 .description {
 
+  &Title {
+    color: $textColor;
+    @include text(28px, 400, 1.21);
+    text-align: center;
+    margin-bottom: 12px;
+    padding-top: 38px;
+
+    @include media(xs) {
+      padding-top: 36px;
+    }
+
+    @include media(sm) {
+      @include text(40px, 500, 1.23);
+      padding-top: 50px;
+      margin-bottom: 31px;
+    }
+
+    @include media (md) {
+      padding-top: 70px;
+      margin-bottom: 0;
+    }
+  }
+
   &TitleCaruselBlock {
+
     @include media (md) {
       display: flex;
       justify-content: space-between;
@@ -26,49 +50,24 @@
       padding-top: 71px;
     }
   }
-
-  &Title {
-    color: $textColor;
-    @include text(28px, 400, 1.21);
-    text-align: center;
-    margin-bottom: 13px;
-    padding-top: 39px;
-
-    @include media(sm) {
-      @include text(40px, 500, 1.23);
-      padding-top: 50px;
-      margin-bottom: 40px;
-    }
-
-    @include media (md) {
-      padding-top: 71px;
-      margin-bottom: 0;
-    }
-  }
-
-  &ContentWrap {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .descriptionContent {
 
   @include media (md) {
-    margin-top: -260px;
+    margin-top: -267px;
   }
 
   &Text {
     color: $textColor;
     @include text(14px, 400, 1.43);
-    margin-bottom: 24px;
-    padding-top: 30px;
+    margin-bottom: 34px;
+    padding-top: 29px;
 
 
     @include media(xs) {
       @include text(18px, 400, 1.44);
-      margin-bottom: 22px;
-      margin-right: 14px;
+      margin-bottom: 18px;
     }
 
     @include media(sm) {
@@ -92,21 +91,23 @@
   @include media(xs) {
     padding-top: 20px;
     padding-bottom: 29.2px;
-    align-items: flex-end;
+    align-items: flex-start;
   }
 
   @include media (md) {
     width: 50%;
-    padding-bottom: 31px;
+    padding-bottom: 25px;
   }
 
   &Img {
+    width: 36.65px;
+    height: 41px;
     margin-right: 11px;
-    width: 32px;
-    height: 35.8px;
 
     @include media(xs) {
       margin-right: 10px;
+      width: 32px;
+      height: 35.8px;
     }
   }
 
@@ -114,19 +115,22 @@
     color: $textColor;
     @include text(14px, 400, 1.43);
 
-    & span {
-      font-weight: 600;
-    }
-
     @include media(xs) {
       display: flex;
       @include text(18px, 400, 1.43);
+      padding-top: 10px;
+    }
+
+    & span {
+      font-weight: 600;
     }
   }
 
   &ContentText {
+    margin-bottom: 5px;
+
     @include media(xs) {
-      margin-right: 14px;
+      margin-right: 16px;
     }
   }
 

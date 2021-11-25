@@ -53,9 +53,9 @@ const Description = () => {
               <img className={s.testimonialsBlockImg} src={cup} alt="cup" />
               <div className={s.testimonialsBlockContent}>
                 <p className={s.testimonialsBlockContentText}>Более <span>50</span> отзывов с оценкой </p>
-              
-                  <RatingDescription />
-                
+
+                <RatingDescription />
+
               </div>
             </div>
           </div>
