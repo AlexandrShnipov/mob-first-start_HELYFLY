@@ -1,0 +1,35 @@
+@import '../../../styles/sass/mixins.scss';
+@import '../../../styles/sass/vars.scss';
+
+.gallery {
+   display: none;
+
+  @include media (sm) {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 45px;
+  }
+
+  @include media (md) {
+    grid-template-columns: repeat(4, max-content);
+    margin-bottom: 41px;
+  }
+
+  @include media (lg ) {
+      margin-bottom: 45 px;
+  }
+
+  &Item {
+    height: 185px;
+    width: 276px;
+  }
+
+  &Img{
+    height: inherit;
+    width: inherit;
+
+  
+  }
+}
