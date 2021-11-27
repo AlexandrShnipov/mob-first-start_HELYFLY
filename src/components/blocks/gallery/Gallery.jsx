@@ -1,4 +1,4 @@
-import React from "react";
+import {Link} from 'react-router-dom';
 import s from './Gallery.module.scss';
 import CaruselGallery from '../../common/carusel/caruselGallery/CaruselGallery';
 import GalleryItems from '../../common/galleryItems/GalleryItems';
@@ -18,6 +18,10 @@ const Gallery = () => {
           </div>
 
           <GalleryItems />
+
+          <Link className={s.linkShowOll} to={'#'}>
+            <span className={s.linkShowOllArrowLeft}></span> Показать все фото <span className={s.linkShowOllArrowRight}></span>
+          </Link>
 
         </div>
       </div>

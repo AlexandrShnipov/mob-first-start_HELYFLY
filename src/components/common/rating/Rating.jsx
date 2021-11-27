@@ -8,7 +8,7 @@ const RatingStar = () => {
   return (
       <Rating
     emptySymbol={<img className='starRating' src={star}  alt="star"/>}
-    // fullSymbol={<img className={s.icon} src={star}  alt="star"/>}
+    fullSymbol={<img className='starRating' src={star}  alt="star"/>}
     // fractions={2}
   />
   )
