@@ -16,7 +16,7 @@
   }
 }
 
-.inner{
+.inner {
   border-bottom: .5px solid $secondaryColor;
 }
 
@@ -90,6 +90,7 @@
   &:active .linkShowOllArrowLeft,
   &:active .linkShowOllArrowRight {
     transform: rotate(180deg);
+    top: calc(50% - 2px);
   }
 
   //! for frontend
@@ -123,7 +124,7 @@
     position: absolute;
     content: ' ';
     top: calc(50% - 4px);
-    left: 7px;
+
     width: 2px;
     height: 8px;
     background-color: $secondaryColor;
@@ -132,10 +133,12 @@
 
   &ArrowLeft::before {
     transform: rotate(45deg);
+    left: 7px
   }
 
   &ArrowLeft::after {
     transform: rotate(-45deg);
+    left: 8px
   }
 
   &ArrowRight::before,
@@ -143,7 +146,6 @@
     position: absolute;
     content: ' ';
     top: calc(50% - 4px);
-    right: 7px;
     width: 2px;
     height: 8px;
     background-color: $secondaryColor;
@@ -152,10 +154,12 @@
 
   &ArrowRight::before {
     transform: rotate(45deg);
+    left: 7px;
   }
 
   &ArrowRight::after {
     transform: rotate(-45deg);
+    left: 8px;
   }
 
   @include media(sm) {
