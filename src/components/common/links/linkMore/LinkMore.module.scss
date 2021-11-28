@@ -1,0 +1,51 @@
+@import '../../../../styles/sass/vars.scss';
+@import '../../../../styles/sass/mixins.scss';
+
+.link {
+  @include text(16px, 500, 1.44);
+  color: $linkColor;
+  display: block;
+  width: 126px;
+  position: relative;
+
+  &Arrow {
+    display: block;
+    width: 16px;
+    height: 8px;
+    position: absolute;
+    content: ' ';
+    top: calc(50% - 4px);
+    right: 0;
+  }
+
+  &Arrow::before,
+  &Arrow::after {
+    position: absolute;
+    content: ' ';
+    top: calc(50% - 4px);
+    width: 2px;
+    height: 8px;
+    background-color: $secondaryColor;
+    transform-origin: bottom;
+  }
+
+  &Arrow::before {
+    transform: rotate(45deg);
+    right: 6px;
+  }
+
+  &Arrow::after {
+    transform: rotate(-45deg);
+    right: 5px;
+  }
+
+  &:active .linkArrow {
+    transform: rotate(180deg);
+    top: calc(50% - 2px);
+  }
+}
+
+//! for frontend
+.active {
+  transform: rotate(180deg);
+}

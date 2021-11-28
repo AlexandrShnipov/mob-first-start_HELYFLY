@@ -4,7 +4,6 @@
 .container {
   @extend %container;
   padding-right: 0 !important;
-  margin-bottom: 63px;
   position: relative;
 
   @include media (sm) {
@@ -24,6 +23,7 @@
  }
 
 .gallery {
+  margin-bottom: 63px;
 
   &Title {
     @include text(26px, 400, 1.23);

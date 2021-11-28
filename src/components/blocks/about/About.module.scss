@@ -1,0 +1,41 @@
+@import '../../../styles/sass/mixins.scss';
+@import '../../../styles/sass/vars.scss';
+
+.about {
+  margin-bottom: 21px;
+  color: $textColor;
+}
+
+.container {
+  @extend %container;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+
+  &Organizer {
+    margin-bottom: 40px;
+  }
+
+  &Title {
+    @include text(18px, 500, 1.44);
+    margin-bottom: 14px;
+  }
+
+  &Text{
+    @include text(16px, 400, 1.5);
+    margin-bottom: 22px;
+  }
+
+  &Text+&Text{
+    margin-top: 38px;
+  }
+
+  &Activiti {
+    margin-bottom: 52px;
+  }
+}

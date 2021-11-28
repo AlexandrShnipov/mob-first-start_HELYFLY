@@ -37,8 +37,11 @@ a,
 button,
 input{
   cursor: pointer;
+  transition: all .5s linear;
 }
 
 a{
   text-decoration: none;
 }
+
+

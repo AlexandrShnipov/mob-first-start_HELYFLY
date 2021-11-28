@@ -19,7 +19,7 @@ export default class VariableWidth extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       variableWidth: true,
-      // autoplay: true,
+      autoplay: true,
       autoplaySpeed: 3000,
       pauseOnHover: true
     };
