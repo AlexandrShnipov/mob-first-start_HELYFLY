@@ -1,0 +1,99 @@
+@import '../../../../styles/sass/mixins.scss';
+@import '../../../../styles/sass/vars.scss';
+
+.linkShowAll {
+  display: none;
+  margin: 0 auto;
+  @include text(17px, 500, 1.12);
+  color: $linkColor;
+  background-color: transparent;
+  position: relative;
+  border: transparent;
+  transition: all .5s linear;
+
+  &:hover {
+    color: #37373F;
+  }
+
+  &:active .linkShowAllArrowLeft,
+  &:active .linkShowAllArrowRight {
+    transform: rotate(180deg);
+    top: calc(50% - 2px);
+  }
+
+  //! for frontend
+  .active {
+    transform: rotate(180deg);
+  }
+
+
+
+  &ArrowLeft {
+    display: block;
+    width: 16px;
+    height: 8px;
+    position: absolute;
+    content: ' ';
+    top: calc(50% - 4px);
+    left: 0;
+
+  }
+
+  &ArrowRight {
+    display: block;
+    width: 16px;
+    height: 8px;
+    position: absolute;
+    content: ' ';
+    top: calc(50% - 4px);
+    right: 0;
+  }
+
+  &ArrowLeft::before,
+  &ArrowLeft::after {
+    position: absolute;
+    content: ' ';
+    top: calc(50% - 4px);
+
+    width: 2px;
+    height: 8px;
+    background-color: $secondaryColor;
+    transform-origin: bottom;
+  }
+
+  &ArrowLeft::before {
+    transform: rotate(45deg);
+    left: 5px
+  }
+
+  &ArrowLeft::after {
+    transform: rotate(-45deg);
+    left: 6px
+  }
+
+  &ArrowRight::before,
+  &ArrowRight::after {
+    position: absolute;
+    content: ' ';
+    top: calc(50% - 4px);
+    width: 2px;
+    height: 8px;
+    background-color: $secondaryColor;
+    transform-origin: bottom;
+  }
+
+  &ArrowRight::before {
+    transform: rotate(45deg);
+    right: 6px;
+  }
+
+  &ArrowRight::after {
+    transform: rotate(-45deg);
+    right: 5px;
+  }
+
+  @include media(sm) {
+    display: flex;
+    justify-content: center;
+  }
+}

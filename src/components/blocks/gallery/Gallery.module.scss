@@ -17,34 +17,42 @@
 }
 
 .inner {
-  border-bottom: .5px solid $secondaryColor;
-}
+
+  @include media (sm){
+     border-bottom: .5px solid $secondaryColor;
+  }
+ }
 
 .gallery {
 
   &Title {
     @include text(26px, 400, 1.23);
     text-align: center;
-    margin: 0 auto 32px;
+    margin: 0 0 34px 12px;
     width: 266px;
     // margin-right: 15px;
 
-    @include media (sm) {
-      @include text(20px, 400, 1.4);
-      width: 100%;
-      text-align: left;
-      margin: 0 0 30px 0;
+    @include media (xs){
+      margin: 0 0 34px 119px;
     }
+
+    @include media (sm) {
+      @include text(20px, 500, 1.4);
+      width: 100%;
+      margin: 0 0 25px 0;
+      text-align: left;
+        }
 
     @include media (md) {
       @include text(28px, 500, 1.46);
-      margin: 0 0 50px 0;
-    }
-
-    @include media (md) {
-      @include text(20px, 500, 1.45);
       margin: 0 0 37px 0;
     }
+
+    
+    @include media (lg) {
+      @include text(20px, 500, 1.46);
+      margin: 0 0 33px 0;
+          }
 
     &>span {
       display: none;
@@ -63,7 +71,22 @@
   }
 }
 
-.linkShowOll {
+.galleryLinkWrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+
+  @include media(md) {
+    margin-bottom: 30px;
+    margin-left: -12px;
+  }
+
+  @include media(lg) {
+    margin-bottom: 25px;
+  }
+}
+
+.linkShowAll {
   display: none;
   margin: 0 auto;
   @include text(17px, 500, 1.4);
@@ -72,23 +95,14 @@
   background-color: transparent;
   position: relative;
   border: transparent;
-  margin-bottom: 27px;
   transition: all .5s linear;
-
-  @include media(md) {
-    margin-bottom: 30px;
-  }
-
-  @include media(lg) {
-    margin-bottom: 30px;
-  }
 
   &:hover {
     color: #37373F;
   }
 
-  &:active .linkShowOllArrowLeft,
-  &:active .linkShowOllArrowRight {
+  &:active .linkShowAllArrowLeft,
+  &:active .linkShowAllArrowRight {
     transform: rotate(180deg);
     top: calc(50% - 2px);
   }

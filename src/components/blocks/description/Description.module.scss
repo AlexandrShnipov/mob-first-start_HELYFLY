@@ -4,6 +4,15 @@
 .container {
   @extend %container;
   margin-bottom: 60px;
+
+  @include media (md){
+    margin-bottom: 66px;
+  }
+
+  @include media (lg){
+    margin-bottom: 28px;
+  }
+
 }
 
 .inner {
@@ -84,13 +93,13 @@
 .testimonialsBlock {
   display: flex;
   padding-top: 14px;
-  padding-bottom: 14px;
+  padding-bottom: 9px;
   border-top: 0.5px solid $secondaryColor;
   border-bottom: 0.5px solid $secondaryColor;
 
   @include media(xs) {
     padding-top: 20px;
-    padding-bottom: 29.2px;
+    padding-bottom: 22px;
     align-items: flex-start;
   }
 
