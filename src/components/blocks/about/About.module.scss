@@ -26,7 +26,7 @@
     border-bottom: .5px solid $secondaryColor;
   }
 
-  @include media(sm) {
+  @include media(md) {
     flex-direction: row-reverse;
     justify-content: space-between;
     padding-right: 111px;
@@ -51,7 +51,7 @@
     @include text(18px, 500, 1.44);
     margin-bottom: 13px;
 
-    @include media(xs){
+    @include media(xs) {
       margin-bottom: 12px;
     }
   }
@@ -85,17 +85,27 @@
     }
   }
 
+  &Text576>br {
+    @include media(sm) {
+      display: none;
+    }
+  }
+
   &Text+&Text {
     margin-top: 26px;
     margin-bottom: 19px;
   }
 
-  &Text576+&Text576{
+  &Text576+&Text576 {
     margin-top: 26px;
     margin-bottom: 16px;
   }
 
   &Activiti {
     margin-bottom: 52px;
+
+    @include media(xs) {
+      margin-bottom: 47px;
+    }
   }
 }
