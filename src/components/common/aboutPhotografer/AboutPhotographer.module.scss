@@ -3,6 +3,10 @@
 
 .aboutPhotographer {
 
+  @include media(xs){
+    margin-bottom: 6px;
+  }
+
   @include media(md){
     padding-top: 17px;
   }
@@ -10,19 +14,40 @@
   &BlockFoto {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 23px;
+    justify-content: center;
+    margin-bottom: 24px;
+    padding-left: 18px;
+
+    @include media(xs){
+      padding-left: 27px;
+    }
   }
 
+  &Heart{
+    position: relative;
+    left: 51px;
+    top: -13px;
+
+    @include media(xs){
+      left: 47px;
+      top: -14px;
+    }
+}
+  
   &Info {
     text-align: center;
     color: $textColor;
+    margin-left: -14px;
+
+    @include media(xs){
+      margin-left: -4px;
+    }
   }
 
   &InfoName {
     display: flex;
     justify-content: center;
-    margin-bottom: 7px;
+    margin-bottom: 6px;
     @include text(18px, 500, 1.22)
   }
 
@@ -37,6 +62,6 @@
     @include text(14px, 500, 1.5);
     color: $linkColor;
     width: 200px;
-    margin-bottom: 25px;
+    margin-bottom: 19px;
   }
 }
