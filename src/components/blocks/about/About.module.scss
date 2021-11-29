@@ -2,8 +2,16 @@
 @import '../../../styles/sass/vars.scss';
 
 .about {
-  margin-bottom: 21px;
+  margin-bottom: 40px;
   color: $textColor;
+
+  @include media(xs){
+    margin-bottom: 21px; 
+  }
+
+  @include media(sm){
+    margin-bottom: 50 px; 
+  }
 }
 
 .container {
@@ -13,9 +21,23 @@
 .inner {
   display: flex;
   flex-direction: column;
+
+  @include media(xs){
+    border-bottom: .5px solid $secondaryColor; 
+  }
+
+  @include media(md){
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-right: 111px;
+  }
 }
 
 .description {
+
+  @include media(md){
+    width: 584px;
+  }
 
   &Organizer {
     margin-bottom: 40px;

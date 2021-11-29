@@ -3,6 +3,10 @@
 
 .aboutPhotographer {
 
+  @include media(md){
+    padding-top: 17px;
+  }
+
   &BlockFoto {
     display: flex;
     align-items: flex-start;
