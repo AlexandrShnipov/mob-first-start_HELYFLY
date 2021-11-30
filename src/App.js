@@ -5,6 +5,7 @@ import Main from './components/blocks/main/Main';
 import Description from './components/blocks/description/Description';
 import Gallery from './components/blocks/gallery/Gallery';
 import About from './components/blocks/about/About';
+import Recording from './components/blocks/recording/Recording';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Description/>
       <Gallery/>
       <About/>
+      <Recording/>
     </div>
     </HashRouter>
     );

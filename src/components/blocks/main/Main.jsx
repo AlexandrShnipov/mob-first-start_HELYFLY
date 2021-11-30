@@ -19,7 +19,7 @@ function Main() {
                         </div>
 
                     </div>
-                    <Button title="Забронировать место" />
+                    <Button/>
                 </div>
             </div>
         </section>
