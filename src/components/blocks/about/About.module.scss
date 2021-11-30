@@ -29,7 +29,7 @@
   @include media(md) {
     flex-direction: row-reverse;
     justify-content: space-between;
-    padding-right: 111px;
+    padding-right: 159px;
   }
 }
 
@@ -54,12 +54,17 @@
     @include media(xs) {
       margin-bottom: 12px;
     }
+
+    @include media(xs) {
+      margin-bottom: 11px;
+    }
   }
 
   // ! text
 
   &Text,
-  &Text576 {
+  &Text576, 
+  &TextMax {
     @include text(16px, 400, 1.5);
     margin-bottom: 18px;
     text-align: start;
@@ -69,6 +74,7 @@
     @include media(xs) {
       display: none;
     }
+  }
 
     &Text576 {
       display: none;
@@ -76,8 +82,19 @@
       @include media(xs) {
         display: block;
       }
+
+      @include media(sm) {
+        display: none;
+      }
     }
-  }
+
+    &TextMax{
+      display: none;
+
+      @include media(sm) {
+        display: block;
+      }
+    }  
 
   &Text>br {
     @include media(xs) {
@@ -101,11 +118,20 @@
     margin-bottom: 16px;
   }
 
+  &TextMax+&TextMax{
+    margin-top: 26px;
+    margin-bottom: 4px;
+  }
+
   &Activiti {
     margin-bottom: 52px;
 
     @include media(xs) {
       margin-bottom: 47px;
-    }
+    }   
+  }
+
+  &Activiti>&TextMax{
+    margin-bottom: 7px;
   }
 }
