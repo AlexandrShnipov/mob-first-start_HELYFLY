@@ -1,0 +1,36 @@
+@import '../../../styles/sass/mixins.scss';
+@import '../../../styles/sass/vars.scss';
+
+.recordingTimeWrap {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  border-bottom: .5px solid $secondaryColor;
+}
+
+.recordingTimeSelect {
+  display: flex;
+  flex-direction: column;
+}
+
+.time,
+.places{
+  @include text(18px, 400, 1.44);
+}
+
+.time{
+  margin-bottom: 10px;
+}
+
+.places{
+  margin-bottom: 20px;
+}
+
+.value{
+  @include text(18px, 600, 1.22);
+  margin-bottom: 10px;
+}
+

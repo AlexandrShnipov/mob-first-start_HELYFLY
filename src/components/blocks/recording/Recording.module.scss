@@ -1,11 +1,46 @@
 @import '../../../styles/sass/mixins.scss';
 @import '../../../styles/sass/vars.scss';
 
+.container {
+  @extend %container;
+}
+
+.recording {
+  color: $textColor;
+ 
+  &Title {
+    @include text(26px, 400, 1.23);
+    text-align: center;
+    margin-bottom: 41px;
+  }
+}
+
+.timeBlock {
+
+  &DateWrap {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid $secondaryColor;
+    border-bottom: 1px solid $secondaryColor;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &Date {
+    display: block;
+    @include text(18px, 500, 1.44);
+    padding: 20px 0 16px 0;
+  }
+
+  &Input {
+    display: none;
+  }
+}
+
 .testimonialsBlock {
   display: flex;
-  padding-top: 14px;
-  padding-bottom: 9px;
-  border-top: 0.5px solid $secondaryColor;
+  padding-top: 32px;
+  padding-bottom: 29px;
   border-bottom: 0.5px solid $secondaryColor;
 
   @include media(xs) {
@@ -22,7 +57,7 @@
   &Img {
     width: 36.65px;
     height: 41px;
-    margin-right: 11px;
+    margin-right: 14px;
 
     @include media(xs) {
       margin-right: 10px;
@@ -33,7 +68,7 @@
 
   &Content {
     color: $textColor;
-    @include text(14px, 400, 1.43);
+    @include text(13px, 400, 1.46);
 
     @include media(xs) {
       display: flex;
@@ -47,7 +82,7 @@
   }
 
   &ContentText {
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 
     @include media(xs) {
       margin-right: 16px;

@@ -7,19 +7,19 @@ import cup from '../../../assets/img/description/cup.png';
 const Recording = () => {
 
   return (
-    <section className={s.Recording}>
+    <section className={s.recording}>
       <div className={s.container}>
         <div className={s.inner}>
           <h2 className={s.recordingTitle}>
-            Доступная съемка в ближайщее время :
+            Доступная съемка <br/> в ближайщее время :
           </h2>
 
           <div className={s.timeBlock}>
             <div className={s.timeBlockDateWrap}>
               <span className={s.timeBlockDate}>Пятница, 14 сентября</span>
-            
-                <input className={s.timeBlockInput} type="date" name='date' />
-              
+
+              <input className={s.timeBlockInput} type="date" name='date' />
+
             </div>
             <RecordingTime
               time='15:00 - 18:00'

@@ -123,15 +123,15 @@
     margin-bottom: 4px;
   }
 
-  &Activiti {
-    margin-bottom: 52px;
+  // &Activiti {
+  //   margin-bottom: 52px;
 
-    @include media(xs) {
-      margin-bottom: 47px;
-    }   
-  }
+  //   @include media(xs) {
+  //     margin-bottom: 47px;
+  //   }   
+  // }
 
-  &Activiti>&TextMax{
-    margin-bottom: 7px;
-  }
+  // &Activiti>&TextMax{
+  //   margin-bottom: 7px;
+  // }
 }
