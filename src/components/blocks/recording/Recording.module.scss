@@ -7,53 +7,98 @@
 
 .recording {
   color: $textColor;
- 
+  margin-bottom: 45px;
+
+  @include media(md) {
+    margin-bottom: 82px;
+  }
+
+  &ContentWrap {
+    @include media(md) {
+      margin-right: 440px;
+      border-right: 1px solid $secondaryColor;
+    }
+  }
+
+
+
   &Title {
     @include text(26px, 400, 1.23);
     text-align: center;
     margin-bottom: 41px;
+
+    @include media(xs) {
+      @include text(26px, 400, 1.46);
+      margin-bottom: 40px;
+    }
+
+    @include media(sm) {
+      @include text(20px, 500, 1.4);
+      text-align: start;
+      margin-bottom: 30px;
+    }
+
+    @include media(md) {
+      @include text(28px, 500, 1.46);
+      margin-bottom: 40px;
+    }
+
+    @include media(lg){
+      @include text(20px, 500, 1.45);
+      margin-bottom: 30px;
+    }
   }
 }
 
 .timeBlock {
 
-  &DateWrap {
+   &DateWrap {
     display: flex;
     justify-content: center;
     border-top: 1px solid $secondaryColor;
     border-bottom: 1px solid $secondaryColor;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px 20px 16px;
+
+    @include media(xs) {
+      justify-content: start;
+      align-items: center;
+      padding: 30px 20px 20px;
+
+      @include media(sm) {
+        padding: 30px 30px 20 px;
+      }       
+    }
   }
 
   &Date {
     display: block;
     @include text(18px, 500, 1.44);
-    padding: 20px 0 16px 0;
+    margin-right: 14px;
   }
 
   &Input {
     display: none;
+
+    @include media(xs) {
+      display: block;
+    }
   }
 }
 
 .testimonialsBlock {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 29px;
+  padding: 32px 20px 29px;
   border-bottom: 0.5px solid $secondaryColor;
 
   @include media(xs) {
-    padding-top: 20px;
-    padding-bottom: 22px;
+    padding: 20px 20px 48px;
     align-items: flex-start;
   }
 
-  @include media (md) {
-    width: 50%;
-    padding-bottom: 25px;
+  @include media (sm) {
+    padding: 20px 30px 48px;
   }
-
+  
   &Img {
     width: 36.65px;
     height: 41px;
@@ -86,6 +131,7 @@
 
     @include media(xs) {
       margin-right: 16px;
+      margin-bottom: 0;
     }
   }
 

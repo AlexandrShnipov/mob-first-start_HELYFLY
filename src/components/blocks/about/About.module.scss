@@ -10,7 +10,7 @@
   }
 
   @include media(sm) {
-    margin-bottom: 50 px;
+    margin-bottom: 50px;
   }
 }
 
@@ -24,6 +24,7 @@
 
   @include media(xs) {
     border-bottom: .5px solid $secondaryColor;
+    padding-bottom: 52px;
   }
 
   @include media(md) {

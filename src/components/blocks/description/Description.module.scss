@@ -100,7 +100,7 @@
 
   @include media(xs) {
     padding-top: 20px;
-    padding-bottom: 22px;
+    padding-bottom: 27px;
     align-items: flex-start;
   }
 
@@ -141,6 +141,7 @@
 
     @include media(xs) {
       margin-right: 16px;
+      margin-bottom: 0;
     }
   }
 
