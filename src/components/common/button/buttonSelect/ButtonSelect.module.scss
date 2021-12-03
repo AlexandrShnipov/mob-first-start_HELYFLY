@@ -1,12 +1,14 @@
 @import '../../../../styles/sass/vars.scss';
 @import '../../../../styles/sass/mixins.scss';
 
-.btn{
+.btn {
   display: block;
-  padding: 16px 32px 16px 33px;
-  color: $accentColor;
+  padding: 16px 28px 16px 33px;
+  width: fit-content;
   border: 2px solid $accentColor;
+  border-radius: 3px;
   background-color: transparent;
   @include text(14px, 500, 1);
-  width: fit-content;
+  color: $accentColor;
+  font-family:inherit;
 }

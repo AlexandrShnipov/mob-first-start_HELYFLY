@@ -14,13 +14,13 @@
   }
 
   &ContentWrap {
+
     @include media(md) {
-      margin-right: 440px;
+      margin-right: 370px;
       border-right: 1px solid $secondaryColor;
+      border-left: 1px solid $secondaryColor;
     }
   }
-
-
 
   &Title {
     @include text(26px, 400, 1.23);
@@ -29,51 +29,54 @@
 
     @include media(xs) {
       @include text(26px, 400, 1.46);
-      margin-bottom: 40px;
+      margin-bottom: 43px;
     }
 
     @include media(sm) {
-      @include text(20px, 500, 1.4);
+      @include text(20px, 500, 1.5);
       text-align: start;
-      margin-bottom: 30px;
+      margin-bottom: 24px;
     }
 
     @include media(md) {
       @include text(28px, 500, 1.46);
-      margin-bottom: 40px;
+      margin-bottom: 28px;
     }
 
-    @include media(lg){
-      @include text(20px, 500, 1.45);
-      margin-bottom: 30px;
+    @include media(lg) {
+      @include text(20px, 500, 1.5);
+      margin-bottom: 24px;
     }
   }
 }
 
 .timeBlock {
 
-   &DateWrap {
+  &DateWrap {
     display: flex;
     justify-content: center;
     border-top: 1px solid $secondaryColor;
     border-bottom: 1px solid $secondaryColor;
-    padding: 20px 20px 16px;
+    padding: 17px 20px 16px;
 
     @include media(xs) {
       justify-content: start;
       align-items: center;
-      padding: 30px 20px 20px;
+      padding: 24px 20px 13px;
 
       @include media(sm) {
-        padding: 30px 30px 20 px;
-      }       
+        padding: 24px 30px 13px;
+      }
     }
   }
 
   &Date {
     display: block;
     @include text(18px, 500, 1.44);
-    margin-right: 14px;
+
+    @include media(xs){
+      margin-right: 16px;
+    }
   }
 
   &Input {
@@ -87,22 +90,26 @@
 
 .testimonialsBlock {
   display: flex;
-  padding: 32px 20px 29px;
+  padding: 32px 20px 26px;
   border-bottom: 0.5px solid $secondaryColor;
 
   @include media(xs) {
-    padding: 20px 20px 48px;
+    padding: 40px 20px 48px;
     align-items: flex-start;
   }
 
   @include media (sm) {
-    padding: 20px 30px 48px;
+    padding: 42px 30px 46px;
   }
-  
+
+  @include media (md) {
+    padding: 41px 30px 46px;
+  }
+
   &Img {
     width: 36.65px;
     height: 41px;
-    margin-right: 14px;
+    margin-right: 12px;
 
     @include media(xs) {
       margin-right: 10px;
@@ -127,12 +134,16 @@
   }
 
   &ContentText {
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 
     @include media(xs) {
       margin-right: 16px;
       margin-bottom: 0;
     }
+
+    @include media(lg) {
+      margin-right: 14px;
+          }
   }
 
 }

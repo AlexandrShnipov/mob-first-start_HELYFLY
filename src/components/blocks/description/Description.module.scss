@@ -16,7 +16,7 @@
    margin-bottom: 60px;
 
   @include media (md){
-    margin-bottom: 66px;
+    margin-bottom: 70px;
   }
 
   @include media (lg){
@@ -107,6 +107,10 @@
   @include media (md) {
     width: 50%;
     padding-bottom: 25px;
+  }
+
+  @include media (lg) {
+      padding-bottom: 29px;
   }
 
   &Img {

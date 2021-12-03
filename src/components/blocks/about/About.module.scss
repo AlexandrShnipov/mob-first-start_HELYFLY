@@ -2,15 +2,19 @@
 @import '../../../styles/sass/vars.scss';
 
 .about {
-  margin-bottom: 40px;
+  margin-bottom: 38px;
   color: $textColor;
 
   @include media(xs) {
-    margin-bottom: 21px;
+    margin-bottom: 18px;
   }
 
   @include media(sm) {
-    margin-bottom: 50px;
+    margin-bottom: 47px;
+  }
+
+  @include media(lg) {
+    margin-bottom: 48px;
   }
 }
 
@@ -24,58 +28,62 @@
 
   @include media(xs) {
     border-bottom: .5px solid $secondaryColor;
-    padding-bottom: 52px;
+    padding-bottom: 50px;
   }
 
-  @include media(md) {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    padding-right: 159px;
-  }
-}
-
-.description {
-
-  @include media(md) {
-    width: 584px;
+  @include media(sm) {
+    padding-bottom: 46px;
   }
 
-  &Organizer {
-    margin-bottom: 26px;
-
-    @include media(xs) {
-      margin-bottom: 37px;
+    @include media(md) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding-right: 159px;
     }
   }
 
-  &Title {
-    @include text(18px, 500, 1.44);
-    margin-bottom: 13px;
+  .description {
 
-    @include media(xs) {
-      margin-bottom: 12px;
+    @include media(md) {
+      width: 584px;
     }
 
-    @include media(xs) {
-      margin-bottom: 11px;
+    &Organizer {
+      margin-bottom: 26px;
+
+      @include media(xs) {
+        margin-bottom: 37px;
+      }
     }
-  }
 
-  // ! text
+    &Title {
+      @include text(18px, 500, 1.44);
+      margin-bottom: 13px;
 
-  &Text,
-  &Text576, 
-  &TextMax {
-    @include text(16px, 400, 1.5);
-    margin-bottom: 18px;
-    text-align: start;
-  }
+      @include media(xs) {
+        margin-bottom: 12px;
+      }
 
-  &Text {
-    @include media(xs) {
-      display: none;
+      @include media(xs) {
+        margin-bottom: 11px;
+      }
     }
-  }
+
+    // ! text
+
+    &Text,
+    &Text576,
+    &TextMax {
+      @include text(16px, 400, 1.5);
+      margin-bottom: 18px;
+      text-align: start;
+    }
+
+    &Text {
+      @include media(xs) {
+        display: none;
+      }
+    }
 
     &Text576 {
       display: none;
@@ -89,50 +97,51 @@
       }
     }
 
-    &TextMax{
+    &TextMax {
       display: none;
 
       @include media(sm) {
         display: block;
+        margin-bottom: 9px;
       }
-    }  
-
-  &Text>br {
-    @include media(xs) {
-      display: none;
     }
-  }
 
-  &Text576>br {
-    @include media(sm) {
-      display: none;
+    &Text>br {
+      @include media(xs) {
+        display: none;
+      }
     }
+
+    &Text576>br {
+      @include media(sm) {
+        display: none;
+      }
+    }
+
+    &Text+&Text {
+      margin-top: 26px;
+      margin-bottom: 19px;
+    }
+
+    &Text576+&Text576 {
+      margin-top: 26px;
+      margin-bottom: 16px;
+    }
+
+    &TextMax+&TextMax {
+      margin-top: 26px;
+      margin-bottom: 4px;
+    }
+
+    // &Activiti {
+    //   margin-bottom: 52px;
+
+    //   @include media(xs) {
+    //     margin-bottom: 47px;
+    //   }   
+    // }
+
+    // &Activiti>&TextMax{
+    //   margin-bottom: 7px;
+    // }
   }
-
-  &Text+&Text {
-    margin-top: 26px;
-    margin-bottom: 19px;
-  }
-
-  &Text576+&Text576 {
-    margin-top: 26px;
-    margin-bottom: 16px;
-  }
-
-  &TextMax+&TextMax{
-    margin-top: 26px;
-    margin-bottom: 4px;
-  }
-
-  // &Activiti {
-  //   margin-bottom: 52px;
-
-  //   @include media(xs) {
-  //     margin-bottom: 47px;
-  //   }   
-  // }
-
-  // &Activiti>&TextMax{
-  //   margin-bottom: 7px;
-  // }
-}
