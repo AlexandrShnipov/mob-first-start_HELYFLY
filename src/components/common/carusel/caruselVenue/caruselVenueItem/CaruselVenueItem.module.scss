@@ -1,0 +1,43 @@
+@import '../../../../../styles/sass/mixins.scss';
+@import '../../../../../styles/sass/vars.scss';
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  &NumberWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background-color: $accentColor;
+    margin-bottom: 20px;
+
+    .number {
+      @include text(30px, 700, 1);
+      color: $primaryColor;
+    }
+  }
+}
+
+.itemContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+&Title{
+  @include text(16px, 500, 1.44);
+  color: $textColor;
+  margin-bottom: 10px;
+}
+
+&Text{
+  @include text(14px, 400, 1.43);
+  color: $textColor;
+  margin-bottom: 19px;
+}
+}

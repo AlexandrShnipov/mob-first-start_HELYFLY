@@ -1,0 +1,49 @@
+@import './../../../styles/sass/vars.scss';
+@import './../../../styles/sass/mixins.scss';
+
+.venue {
+  margin-bottom: 40px;
+  color: $textColor;
+
+  &Carusel {
+    margin-bottom: 40px;
+  }
+}
+
+.container {
+  @extend %container;
+}
+
+.inner {
+  padding-left: 8px;
+  padding-right: 8px;
+  border: 1px solid $secondaryColor;
+  padding: 52px 32px 20px 30px;
+}
+
+.photographerBlock {
+  display: flex;
+  justify-content: space-between;
+
+  &Foto {
+    width: 67px;
+    height: 67px;
+    margin-right: 11px;
+  }
+}
+
+.name {
+  @include text(16px, 500, 1.25);
+  margin-bottom: 5px;
+}
+
+.profession {
+  @include text(14px, 400, 1.5);
+  margin-bottom: 7px;
+}
+
+.linkMore {
+  display: block;
+  @include text(14px, 500, 1.5);
+  color: $linkColor;
+}
