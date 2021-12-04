@@ -1,0 +1,22 @@
+@import '../../../styles/sass/mixins.scss';
+@import '../../../styles/sass/vars.scss';
+
+.mapWrap {
+  width: 100%;
+  height: 423px;
+  background-color: chartreuse;
+  margin-bottom: 52px;
+
+  @include media(xs) {
+    height: 509px;
+  }
+
+  @include media(md) {
+    margin-bottom: 130px;
+  }
+
+  &>div {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
