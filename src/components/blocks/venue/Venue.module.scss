@@ -50,6 +50,12 @@
     width: 420px;
     min-height: 469px;
     padding: 51px 0 54px 30px;
+    margin: 0;
+    background-color: $primaryColor;
+    position: absolute;
+    left: 70px;
+    top: 3.93%;
+    // bottom: 3.93%;
   }
 }
 
@@ -71,11 +77,20 @@
 .name {
   @include text(16px, 500, 1.25);
   margin-bottom: 5px;
+
+  @include media(md){
+    @include text(18px, 500, 1);
+  }
 }
 
 .profession {
   @include text(14px, 400, 1.5);
   margin-bottom: 7px;
+
+  @include media(md){
+    @include text(16px, 400, 1);
+    margin-bottom: 5px;
+  }
 }
 
 .linkMore {

@@ -17,4 +17,13 @@
         width: 304px;
         @include text(18px, 900, 1.25);
     }
+
+    &:hover  {
+        border: 2px solid $accentColor;
+        color: $accentColor;
+      }
+    
+      &:active{
+        box-shadow: 0 0 10px rgba($accentColor , 1);
+      }
 }

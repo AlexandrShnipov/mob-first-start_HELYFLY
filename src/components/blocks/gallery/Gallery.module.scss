@@ -40,12 +40,12 @@
     &Title {
     @include text(26px, 400, 1.23);
     text-align: center;
-    margin: 0 0 34px 12px;
+    margin: 0 auto 34px;
     width: 266px;
     // margin-right: 15px;
 
     @include media (xs){
-      margin: 0 0 34px 119px;
+      margin: 0 auto 34px;
     }
 
     @include media (sm) {

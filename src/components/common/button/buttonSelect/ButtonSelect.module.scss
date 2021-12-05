@@ -11,4 +11,13 @@
   @include text(14px, 500, 1);
   color: $accentColor;
   font-family:inherit;
+
+  &:hover  {
+    border: 2px solid $linkColor;
+    color: $linkColor;
+  }
+
+  &:active{
+    box-shadow: 0 0 10px rgba($linkColor , 1);
+  }
 }
