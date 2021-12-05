@@ -18,7 +18,7 @@ export default function SimpleSlider() {
     pauseOnHover: true
   };
   return (
-    <Slider {...settings} className={'caruselVenue'}>
+    <Slider {...settings} className={'caruselVenue'} dotsClass={'dots'}>
 
       <CaruselVenueItem
         number='1'

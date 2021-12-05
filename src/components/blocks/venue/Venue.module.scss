@@ -4,9 +4,23 @@
 .venue {
   margin-bottom: 40px;
   color: $textColor;
+  position: relative;
 
   &Carusel {
     margin-bottom: 40px;
+
+    @include media(md) {
+      display: none;
+    }
+  }
+
+  &Items{
+    display: none;
+
+    @include media(md){
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
@@ -15,15 +29,37 @@
 }
 
 .inner {
-  padding-left: 8px;
-  padding-right: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
   border: 1px solid $secondaryColor;
-  padding: 52px 32px 20px 30px;
+  padding: 52px 30px 20px;
+
+  @include media(xs) {
+    padding: 52px 93px 20px;
+    margin-left: 53px;
+    margin-right: 53px;
+  }
+
+  @include media(sm) {
+    padding: 52px 93px 20px;
+    margin-left: 131px;
+    margin-right: 131px;
+  }
+
+  @include media(md) {
+    width: 420px;
+    min-height: 469px;
+    padding: 51px 0 54px 30px;
+  }
 }
 
 .photographerBlock {
   display: flex;
   justify-content: space-between;
+
+  @include media(md) {
+    justify-content: flex-start;
+  }
 
   &Foto {
     width: 67px;
@@ -46,4 +82,11 @@
   display: block;
   @include text(14px, 500, 1.5);
   color: $linkColor;
+
+
+  &>span {
+    @include media(md) {
+      display: none;
+    }
+  }
 }
