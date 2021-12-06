@@ -15,8 +15,8 @@ const Maps = () => (
             iconColor: 'rgb(255,0,0)'
           }}
           properties={{
-            // balloonContentHeader: "Балун метки"
-            balloonContentBody: 'Встречаемся тут!'
+            balloonContentHeader: 'Встречаемся тут!'
+            // balloonContentBody: 'Встречаемся тут!'
             // balloonContentFooter: "Подвал"
           }} />
       </Map>

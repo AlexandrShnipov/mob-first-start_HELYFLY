@@ -1,0 +1,101 @@
+@import '../../../styles/sass/vars.scss';
+@import '../../../styles/sass/mixins.scss';
+
+.testimonial {
+  margin-bottom: 30px;
+
+
+  &:nth-last-of-type(1) {
+    display: none;
+
+    @include media(xs) {
+      display: block;
+    }
+  }
+
+  &TextWrap {
+    border-bottom: .5px solid $secondaryColor;
+
+    @include media(sm) {
+      margin-left: 102px;
+    }
+  }
+
+  &Text {
+    @include text(14px, 400, 1.5);
+    margin-bottom: 40px;
+  }
+
+  &Date {
+    @include text(14px, 400, 1.5);
+    color: $textColorLight;
+    display: block;
+    margin-bottom: 44px;
+  }
+}
+
+.autorBlock {
+  display: flex;
+  position: relative;
+  padding-left: 102px;
+
+  &Foto {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &ContentWrap {
+    display: flex;
+    flex-direction: column;
+
+    @include media(sm) {
+      flex-direction: row;
+    }
+  }
+
+  &Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 65px;
+    margin-bottom: 31px;
+  }
+
+  &ContentName {
+    @include text(16px, 500, 1.25);
+    margin-bottom: 6px;
+  }
+
+  &ContentPosition {
+    @include text(14px, 400, 1.5);
+    margin-bottom: 7px;
+  }
+
+  &Slogan {
+    @include text(14px, 400, 1.5);
+    color: $textColorLight;
+    display: block;
+    margin-bottom: 14px;
+    margin-left: -102px;
+    padding-left: 21px;
+    position: relative;
+
+    @include media(sm) {
+      margin-top: auto;
+      margin-bottom: 30px;
+      margin-left: 50px;
+    }
+
+    &::before {
+      position: absolute;
+      content: ' ';
+      background-image: url('../../../assets/img/testimonials/vector.png');
+      background-repeat: no-repeat;
+      background-position: 0 center;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

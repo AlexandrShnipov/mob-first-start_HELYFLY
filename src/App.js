@@ -7,6 +7,7 @@ import Gallery from './components/blocks/gallery/Gallery';
 import About from './components/blocks/about/About';
 import Recording from './components/blocks/recording/Recording';
 import Venue from './components/blocks/venue/Venue';
+import Testimonials from "./components/blocks/testimonials/Testimonials";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <About />
         <Recording />
         <Venue />
+        <Testimonials/>
       </div>
     </HashRouter>
   );
