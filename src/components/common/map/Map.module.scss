@@ -11,10 +11,6 @@
     height: 509px;
   }
 
-  @include media(md) {
-    margin-bottom: 130px;
-  }
-
   &>div {
     width: 100% !important;
     height: 100% !important;

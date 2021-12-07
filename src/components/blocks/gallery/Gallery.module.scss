@@ -17,34 +17,34 @@
 
 .inner {
 
-  @include media (sm){
-     border-bottom: .5px solid $secondaryColor;
+  @include media (sm) {
+    border-bottom: .5px solid $secondaryColor;
   }
- }
+}
 
 .gallery {
   margin-bottom: 58px;
 
-  @include media(xs){
+  @include media(xs) {
     margin-bottom: 60px;
   }
 
-  @include media(sm){
+  @include media(sm) {
     margin-bottom: 56px;
   }
-   
-  @include media(md){
+
+  @include media(md) {
     margin-bottom: 37px;
   }
 
-    &Title {
+  &Title {
     @include text(26px, 400, 1.23);
     text-align: center;
     margin: 0 auto 34px;
     width: 266px;
     // margin-right: 15px;
 
-    @include media (xs){
+    @include media (xs) {
       margin: 0 auto 34px;
     }
 
@@ -53,18 +53,18 @@
       width: 100%;
       margin: 0 0 25px 0;
       text-align: left;
-        }
+    }
 
     @include media (md) {
       @include text(28px, 500, 1.46);
       margin: 0 0 37px 0;
     }
 
-    
+
     @include media (lg) {
       @include text(20px, 500, 1.46);
       margin: 0 0 33px 0;
-          }
+    }
 
     &>span {
       display: none;
@@ -84,9 +84,15 @@
 }
 
 .galleryLinkWrap {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 25px;
+  display: none;
+  margin: 0 auto 25px;
+
+
+  @include media(sm) {
+    display: flex;
+    justify-content: center;
+
+  }
 
   @include media(md) {
     margin-bottom: 30px;

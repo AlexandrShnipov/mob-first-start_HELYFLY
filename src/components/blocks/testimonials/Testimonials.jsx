@@ -4,6 +4,7 @@ import Testimonial from '../../common/testimonial/Testimonial';
 import fotoAutor_1 from '../../../assets/img/testimonials/fotoAutor_1.png';
 import fotoAutor_2 from '../../../assets/img/testimonials/fotoAutor_2.png';
 import fotoAutor_3 from '../../../assets/img/testimonials/fotoAutor_3.png';
+import LinkShowAll from "../../common/links/linkShowAll/LinkShowAll";
 
 
 const Testimonials = () => {
@@ -12,7 +13,7 @@ const Testimonials = () => {
     <section className={s.testimonials}>
       <div className={s.container}>
         <div className={s.inner}>
-          <h2 className={s.testimonialsTitle}>Отзывы</h2>
+          <h2 className={s.testimonialsTitle}>Отзывы:     </h2>
 
           <Testimonial
             foto={fotoAutor_1}
@@ -46,7 +47,14 @@ const Testimonials = () => {
             date='11 Апреля, 2019г.'
           />
 
-          <Link className={s.link} to={'#'}>Показать Все (134) <span className={s.linkArrow}></span></Link>
+          <div className={s.testimonialsLinkWrap}>
+            <LinkShowAll
+              text='Показать Все'
+              styleLink={{ width: '203px' }}
+              number='(134)'
+            />
+          </div>
+
         </div>
       </div>
     </section>

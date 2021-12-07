@@ -4,6 +4,10 @@
 .testimonial {
   margin-bottom: 30px;
 
+  @include media(sm){
+    max-width: 655px;
+  }
+
 
   &:nth-last-of-type(1) {
     display: none;

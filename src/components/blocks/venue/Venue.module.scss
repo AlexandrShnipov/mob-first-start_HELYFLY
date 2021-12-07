@@ -14,10 +14,10 @@
     }
   }
 
-  &Items{
+  &Items {
     display: none;
 
-    @include media(md){
+    @include media(md) {
       display: flex;
       flex-direction: column;
     }
@@ -53,9 +53,17 @@
     margin: 0;
     background-color: $primaryColor;
     position: absolute;
-    left: 70px;
+    left: 5.47%;
     top: 3.93%;
     // bottom: 3.93%;
+  }
+
+  @include media(lg) {
+    left: 10.42%;
+  }
+
+  @include media(xxl) {
+    left: 20.31%;
   }
 }
 
@@ -78,7 +86,7 @@
   @include text(16px, 500, 1.25);
   margin-bottom: 5px;
 
-  @include media(md){
+  @include media(md) {
     @include text(18px, 500, 1);
   }
 }
@@ -87,7 +95,7 @@
   @include text(14px, 400, 1.5);
   margin-bottom: 7px;
 
-  @include media(md){
+  @include media(md) {
     @include text(16px, 400, 1);
     margin-bottom: 5px;
   }

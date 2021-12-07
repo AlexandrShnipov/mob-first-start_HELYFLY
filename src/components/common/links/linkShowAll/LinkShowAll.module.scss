@@ -2,11 +2,10 @@
 @import '../../../../styles/sass/vars.scss';
 
 .linkShowAll {
-  display: none;
-  margin: 0 auto;
-  @include text(17px, 500, 1.12);
+   @include text(17px, 500, 1.12);
   color: $linkColor;
   position: relative;
+  display: flex;
   justify-content: center;
 
   @include media(sm) {

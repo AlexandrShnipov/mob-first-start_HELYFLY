@@ -5,7 +5,10 @@ const LinkShowAll = (props) => {
 
   return (
     <Link className={s.linkShowAll} to={'#'} style={props.styleLink}>
-      <span className={s.linkShowAllArrowLeft}></span>{props.text}<span className={s.linkShowAllTextNumder} style={props.style}>{props.number}</span> <span className={s.linkShowAllArrowRight}></span>
+      <span className={s.linkShowAllArrowLeft}></span>
+      {props.text}
+      <span className={s.linkShowAllTextNumder} style={props.style}>{props.number}</span>
+       <span className={s.linkShowAllArrowRight}></span>
     </Link>
   )
 }
