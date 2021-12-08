@@ -8,6 +8,7 @@ import About from './components/blocks/about/About';
 import Recording from './components/blocks/recording/Recording';
 import Venue from './components/blocks/venue/Venue';
 import Testimonials from "./components/blocks/testimonials/Testimonials";
+import Footer from './components/blocks/footer/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Recording />
         <Venue />
         <Testimonials/>
+        <Footer/>
       </div>
     </HashRouter>
   );

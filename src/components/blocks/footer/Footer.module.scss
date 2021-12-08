@@ -1,0 +1,128 @@
+@import '../../../styles/sass/vars.scss';
+@import '../../../styles/sass/mixins.scss';
+
+.container {
+  @extend %container;
+}
+
+.footer {
+  padding-top: 4px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: ' ';
+    top: 67px;
+    left: 0;
+    width: 100%;
+    height: .5px;
+    background-color: $textColorLight;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 84px 1fr 1fr;
+  grid-template-rows: max-content max-content max-content;
+}
+
+.footerTopLogoLink {
+  display: flex;
+  align-items: center;
+  margin-bottom: 51px;
+}
+
+.footerTopSocialLinks {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 51px;
+}
+
+.footerTopSocialLink+.footerTopSocialLink {
+  margin-left: 30px;
+}
+
+.footerBottomImages {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+  align-items: center;
+}
+
+.footerBottomImage{
+  height: fit-content;
+}
+
+.footerBottomImage:first-child {
+  margin-right: 17px;
+}
+
+.footerBottomSelectWrap {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  @include text(15px, 400, 1.2);
+  color: $textColor;
+  justify-self: end;
+  align-self: center;
+  position: relative;  
+  
+    &::before,
+    &::after {
+      position: absolute;
+      content: ' ';
+      top: calc(50% - 4px);
+      width: 2px;
+      height: 8px;
+      background-color: $secondaryColor;
+      transform-origin: bottom;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      right: 6px;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      right: 5px;
+    }
+  }
+
+.footerBottomSelect {
+  text-transform: uppercase;
+  cursor: pointer;
+  appearance: none;
+  width: 40px;
+  padding: 10px 0 10px;
+  background-color: transparent;
+  border:transparent;
+  outline: transparent;
+
+  &:hover,
+  &:active,
+  &:focus{
+    box-shadow: 0 0 10px #19077e;
+  }
+}
+ 
+
+.footerBottomCopyrightBox {
+  grid-column: 1/4;
+  grid-row: 3/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include text(14px, 400, 1.21);
+  color: $textColor;
+  padding-bottom: 20px;
+  padding-top: 24px;
+}
+
+.footerBottomTel {
+  color: inherit;
+  display: block;
+  margin-bottom: 10px;
+}
