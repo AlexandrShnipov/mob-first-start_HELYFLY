@@ -16,7 +16,7 @@ const Maps = () => (
           }}
           properties={{
             balloonContentHeader: 'Встречаемся тут!'
-            // balloonContentBody: 'Встречаемся тут!'
+            // balloonContentBody: 'текст'
             // balloonContentFooter: "Подвал"
           }} />
       </Map>

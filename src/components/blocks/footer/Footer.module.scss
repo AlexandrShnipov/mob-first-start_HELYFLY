@@ -5,9 +5,21 @@
   @extend %container;
 }
 
+
+.inner {
+  display: grid;
+  grid-template-columns: 125px 1fr 125px;
+  grid-template-rows: max-content max-content max-content;
+
+  @include media(xs) {
+    grid-template-rows: max-content 77px;
+  }
+}
+
 .footer {
   padding-top: 4px;
   position: relative;
+  overflow-x: hidden;
 
   &::before {
     position: absolute;
@@ -17,147 +29,202 @@
     width: 100%;
     height: .5px;
     background-color: $textColorLight;
-  }
-}
 
-.inner {
-  display: grid;
-  grid-template-columns: 125px 1fr 125px;
-  grid-template-rows: max-content max-content max-content;
-
-  @include media(xs){
-    grid-template-rows: max-content 77px;
-  }
-}
-
-.footerTopLogoLink {
-  display: flex;
-  align-items: center;
-  margin-bottom: 51px;
-
-.footerTopLogoImg{
-   @include media(xs){
-    width: 129px;
-    height: 22px;
-  }
-}
- 
-}
-
-.footerTopSocialLinks {
-  grid-column: 3/4;
-  grid-row: 1/2;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  margin-bottom: 51px;
-}
-
-.footerTopSocialLink+.footerTopSocialLink {
-  margin-left: 30px;
-}
-
-.footerBottomImages {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  display: flex;
-  align-items: center;
-}
-
-
-
-.footerBottomImage:first-child {
-  margin-right: 17px;
-  width: 34px;
-  height: 21px;
-
-  @include media(xs) {
-    margin-right: 20x;
-    width: 39px;
-    height: 25px;
-  }
-}
-
-.footerBottomImage:last-child {
-
-  @include media(xs) {
-    width: 39px;
-    height: 27px;
+    @include media(xs) {
+      display: none;
+    }
   }
 
-}
+  &LogoLink {
+    display: flex;
+    align-items: center;
+    margin-bottom: 51px;
 
-.footerBottomSelectWrap {
-  grid-column: 3/4;
-  grid-row: 2/3;
-  @include text(15px, 400, 1.2);
-  color: $textColor;
-  justify-self: end;
-  align-self: center;
-  position: relative;
+    @include media(xs) {
+      margin-bottom: 44px;
+    }
 
-  &::before,
-  &::after {
-    position: absolute;
-    content: ' ';
-    top: calc(50% - 6px);
-    width: 2px;
-    height: 8px;
-    background-color: $secondaryColor;
-    transform-origin: bottom;
+    @include media(md) {
+      margin-left: 65px;
+      margin-bottom: 0;
+    }
+
+    .footerLogoImg {
+      @include media(xs) {
+        width: 129px;
+        height: 22px;
+      }
+    }
   }
 
-  &::before {
-    transform: rotate(45deg);
-    right: 7px;
+  &SocialLinks {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 51px;
+
+    @include media(xs) {
+      margin-bottom: 44px;
+    }
+
+    @include media(md) {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      margin-bottom: 0;
+      padding-bottom: 27px;
+      padding-top: 40px;
+      margin-right: 20px;
+    }
   }
 
-  &::after {
-    transform: rotate(-45deg);
-    right: 6px;
+  &SocialLink+&SocialLink {
+    margin-left: 30px;
   }
-}
 
-.footerBottomSelect {
-  text-transform: uppercase;
-  cursor: pointer;
-  appearance: none;
-  width: 44px;
-  padding: 10px 2px 10px;
-  background-color: transparent;
-  border: transparent;
-  outline: transparent;
-
-  &:hover,
-  &:active,
-  &:focus {
-    box-shadow: 0 0 10px #19077e;
-  }
-}
-
-
-.footerBottomCopyrightBox {
-  grid-column: 1/4;
-  grid-row: 3/4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @include text(14px, 400, 1.21);
-  color: $textColor;
-  padding-bottom: 20px;
-  padding-top: 14px;
-
-  @include media(xs) {
-    grid-column: 2/3;
+  &Images {
+    grid-column: 1/2;
     grid-row: 2/3;
-    padding-top: 0;
-    padding-bottom: 0;
-    justify-content: center;
-  }
-}
+    display: flex;
+    align-items: center;
 
-.footerBottomTel {
-  color: inherit;
-  display: block;
-  margin-bottom: 10px;
+    @include media(xs) {
+      margin-left: -1000px;
+      padding-left: 1000px;
+      background-color: $bacground;
+    }
+
+    @include media(md) {
+      padding-left: 1065px;
+      z-index: 2;
+    }
+  }
+
+  &Image:first-child {
+    margin-right: 17px;
+    width: 34px;
+    height: 21px;
+
+    @include media(xs) {
+      margin-right: 20x;
+      width: 39px;
+      height: 25px;
+    }
+  }
+
+  &Image:last-child {
+
+    @include media(xs) {
+      width: 39px;
+      height: 27px;
+    }
+  }
+
+  &SelectContainer {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    @include media(xs) {
+      background-color: $bacground;
+      margin-right: -1000px;
+      padding-right: 1000px;
+    }
+
+    @include media(md) {
+      grid-column: 3/4;
+      grid-row: 1/2;
+      margin-right: 0;
+      background-color: transparent;
+    }
+
+  }
+
+  &SelectWrap {
+    padding-left: 80px;
+    @include text(15px, 400, 1.2);
+    color: $textColor;
+    justify-self: end;
+    align-self: center;
+    position: relative;
+
+    @include media(md) {
+      right: 70px;
+      top: 5px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: ' ';
+      top: calc(50% - 4px);
+      width: 2px;
+      height: 8px;
+      background-color: $secondaryColor;
+      transform-origin: bottom;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      right: 8px;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      right: 7px;
+    }
+  }
+
+  &Select {
+    text-transform: uppercase;
+    cursor: pointer;
+    appearance: none;
+    width: 50px;
+    padding: 10px 2px 10px;
+    background-color: transparent;
+    border: transparent;
+    outline: transparent;
+
+    &:hover,
+    &:active,
+    &:focus {
+      box-shadow: 0 0 10px #19077e;
+    }
+  }
+
+  &CopyrightBox {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include text(14px, 400, 1.21);
+    color: $textColor;
+    padding-bottom: 20px;
+    padding-top: 14px;
+
+    @include media(xs) {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      padding-top: 0;
+      padding-bottom: 0;
+      justify-content: center;
+      background-color: $bacground;
+    }
+
+    @include media(md) {
+      margin-right: -1500px;
+      padding-right: 1500px;
+    }
+  }
+
+  &Tel {
+    color: inherit;
+    display: block;
+    margin-bottom: 10px;
+  }
 }

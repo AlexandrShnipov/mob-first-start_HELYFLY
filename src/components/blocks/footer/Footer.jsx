@@ -14,36 +14,38 @@ const Footer = () => {
       <div className={s.container}>
         <div className={s.inner}>
 
-          <a className={s.footerTopLogoLink} href="/">
+          <a className={s.footerLogoLink} href="/">
             <img className={s.footerTopLogoImg} src={logo} alt="HELYFLY" />
           </a>
-          <div className={s.footerTopSocialLinks}>
-            <a className={s.footerTopSocialLink} href="/">
-              <img className={s.footerTopSocialImg} src={vk} alt="vkontakte" />
+          <div className={s.footerSocialLinks}>
+            <a className={s.footerSocialLink} href="/">
+              <img className={s.footerSocialImg} src={vk} alt="vkontakte" />
             </a>
-            <a className={s.footerTopSocialLink} href="/">
-              <img className={s.footerTopSocialImg} src={fb} alt="facebook" />
+            <a className={s.footerSocialLink} href="/">
+              <img className={s.footerSocialImg} src={fb} alt="facebook" />
             </a>
-            <a className={s.footerTopSocialLink} href="/">
-              <img className={s.footerTopSocialImg} src={instagram} alt="instagram" />
+            <a className={s.footerSocialLink} href="/">
+              <img className={s.footerSocialImg} src={instagram} alt="instagram" />
             </a>
           </div>
 
-          <div className={s.footerBottomImages}>
-            <img className={s.footerBottomImage} src={mc} alt="logo MC" />
-            <img className={s.footerBottomImage} src={visa} alt="logo visa" />
+          <div className={s.footerImages}>
+            <img className={s.footerImage} src={mc} alt="logo MC" />
+            <img className={s.footerImage} src={visa} alt="logo visa" />
           </div>
 
-         <div className={s.footerBottomSelectWrap}>
-            <select className={s.footerBottomSelect} name="language">
-              <option value="ru" selected>ru</option>
-              <option value="eng">eng</option>
-            </select>
-         </div>
+       <div className={s.footerSelectContainer}>
+           <div className={s.footerSelectWrap}>
+              <select className={s.footerSelect} name="language">
+                <option value="ru" selected>ru</option>
+                <option value="eng">eng</option>
+              </select>
+           </div>
+       </div>
 
-          <div className={s.footerBottomCopyrightBox}>
-            <a className={s.footerBottomTel} href="tel:+88007000000">Тех. поддержка: 8(800)700-00-00</a>
-            <span className={s.footerBottomCopyright}>© 2018 HELYFLY. All Rights Reserved.</span>
+          <div className={s.footerCopyrightBox}>
+            <a className={s.footerTel} href="tel:+88007000000">Тех. поддержка: 8(800)700-00-00</a>
+            <span className={s.footerCopyright}>© 2018 HELYFLY. All Rights Reserved.</span>
           </div>
 
         </div>
