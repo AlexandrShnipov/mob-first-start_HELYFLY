@@ -22,14 +22,26 @@
 
 .inner {
   display: grid;
-  grid-template-columns: 84px 1fr 1fr;
+  grid-template-columns: 125px 1fr 125px;
   grid-template-rows: max-content max-content max-content;
+
+  @include media(xs){
+    grid-template-rows: max-content 77px;
+  }
 }
 
 .footerTopLogoLink {
   display: flex;
   align-items: center;
   margin-bottom: 51px;
+
+.footerTopLogoImg{
+   @include media(xs){
+    width: 129px;
+    height: 22px;
+  }
+}
+ 
 }
 
 .footerTopSocialLinks {
@@ -52,12 +64,27 @@
   align-items: center;
 }
 
-.footerBottomImage{
-  height: fit-content;
-}
+
 
 .footerBottomImage:first-child {
   margin-right: 17px;
+  width: 34px;
+  height: 21px;
+
+  @include media(xs) {
+    margin-right: 20x;
+    width: 39px;
+    height: 25px;
+  }
+}
+
+.footerBottomImage:last-child {
+
+  @include media(xs) {
+    width: 39px;
+    height: 27px;
+  }
+
 }
 
 .footerBottomSelectWrap {
@@ -67,47 +94,47 @@
   color: $textColor;
   justify-self: end;
   align-self: center;
-  position: relative;  
-  
-    &::before,
-    &::after {
-      position: absolute;
-      content: ' ';
-      top: calc(50% - 4px);
-      width: 2px;
-      height: 8px;
-      background-color: $secondaryColor;
-      transform-origin: bottom;
-    }
+  position: relative;
 
-    &::before {
-      transform: rotate(45deg);
-      right: 6px;
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-      right: 5px;
-    }
+  &::before,
+  &::after {
+    position: absolute;
+    content: ' ';
+    top: calc(50% - 6px);
+    width: 2px;
+    height: 8px;
+    background-color: $secondaryColor;
+    transform-origin: bottom;
   }
+
+  &::before {
+    transform: rotate(45deg);
+    right: 7px;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    right: 6px;
+  }
+}
 
 .footerBottomSelect {
   text-transform: uppercase;
   cursor: pointer;
   appearance: none;
-  width: 40px;
-  padding: 10px 0 10px;
+  width: 44px;
+  padding: 10px 2px 10px;
   background-color: transparent;
-  border:transparent;
+  border: transparent;
   outline: transparent;
 
   &:hover,
   &:active,
-  &:focus{
+  &:focus {
     box-shadow: 0 0 10px #19077e;
   }
 }
- 
+
 
 .footerBottomCopyrightBox {
   grid-column: 1/4;
@@ -118,7 +145,15 @@
   @include text(14px, 400, 1.21);
   color: $textColor;
   padding-bottom: 20px;
-  padding-top: 24px;
+  padding-top: 14px;
+
+  @include media(xs) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: center;
+  }
 }
 
 .footerBottomTel {

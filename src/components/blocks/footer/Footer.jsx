@@ -4,8 +4,8 @@ import logo from '../../../assets/img/logo.svg';
 import vk from '../../../assets/img/footer/vk.png';
 import fb from '../../../assets/img/footer/facebook.png';
 import instagram from '../../../assets/img/footer/instragram.png';
-import mc from '../../../assets/img/footer/mc.png';
-import visa from '../../../assets/img/footer/visa.png';
+import mc from '../../../assets/img/footer/mc.svg';
+import visa from '../../../assets/img/footer/visa.svg';
 
 const Footer = () => {
 
